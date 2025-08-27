@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./todo-js:/todo-js/
+    ports:
+      - 1234:1234
+    tty: true
+    stdin_open: true
