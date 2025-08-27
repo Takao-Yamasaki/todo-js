@@ -1,13 +1,37 @@
 <!doctype html>
-<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel Vanilla App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TODO(JS)</title>
+    <meta charset="UTF-8"/>
   </head>
+  
   <body>
-    <h1>Parcel Vanilla App</h1>
-    <p>Edit <code>src/index.html</code> to get started!</p>
+    <div>
+      <input placeholder="TODOを入力" />
+      <button>追加</button>
+    </div>
+    <div>
+      <p>未完了のTODO</p>
+      <ul>
+        <li>
+          <div>
+            <p>TODOです</p>
+            <button>完了</button>
+            <button>削除</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p>完了のTODO</p>
+      <ul>
+        <li>
+          <div>
+            <p>TODOでした</p>
+            <button>戻す</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="./index.mjs" type="module"></script>
   </body>
 </html>
