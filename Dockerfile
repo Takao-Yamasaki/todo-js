@@ -7,4 +7,4 @@ WORKDIR /todo-js
 # RUN npm install
 
 # NOTE: プロジェクト作成前はコメントアウト
-# CMD ["npm", "start"]
+CMD ["npm", "start"]
