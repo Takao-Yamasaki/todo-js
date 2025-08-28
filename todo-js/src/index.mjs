@@ -17,8 +17,26 @@ const onClickAdd = () => {
   p.className = "todo-item";
   p.innerText = inputText;
   
+  // 完了ボタンの生成
+  const compliteButton = document.createElement("button");
+  compliteButton.innerText = "完了";
+  compliteButton.addEventListener("click", () => {
+    // TODO: あとから実装する
+    alert("完了");
+  });
+  
+  // 削除ボタンの生成
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+  deleteButton.addEventListener("click", () => {
+    // TODO: あとから実装する
+    alert("削除");
+  });
+
   // liタグの子要素に各要素を追加
   div.appendChild(p);
+  div.appendChild(compliteButton);
+  div.appendChild(deleteButton);
   li.appendChild(div);
 
   // 未完了のTODOリストにTODOを追加
