@@ -21,8 +21,18 @@ const onClickAdd = () => {
   const compliteButton = document.createElement("button");
   compliteButton.innerText = "完了";
   compliteButton.addEventListener("click", () => {
-    // TODO: あとから実装する
-    alert("完了");
+    // 押下された完了ボタンの親にあるliタグ配下の完了ボタンと削除ボタンを削除
+    const moveTarget = compliteButton.closest("li");
+    // 完了ボタンの次の要素である削除ボタンを削除
+    compliteButton.nextElementSibling.remove();
+    compliteButton.remove();
+    // 戻すボタンを生成してdivタグ配下に設定
+    const backButton = document.createElement("button");
+    backButton.innerText = "戻す"
+    moveTarget.firstElementChild.appendChild(backButton);
+    // 完了リストに移動
+    // moveTargetは参照を持っているので、対象要素の削除は不要
+    document.getElementById("complete-list").appendChild(moveTarget);
   });
   
   // 削除ボタンの生成
